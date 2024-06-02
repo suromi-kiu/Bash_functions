@@ -34,15 +34,14 @@ function conover(){
 
   if [[ $# -eq 0 ]]; then
     echo "[+] Connecting to https://overthewire.org/wargames/bandit/bandit1.html"
-    ssh "bandit0@bandit.labs.overthewire.org" -p 2220
+    ssh -o ExitOnForwardFailure=yes "bandit0@bandit.labs.overthewire.org" -p 2220
   fi
 
-  if [ -n $1 ]; then
+  if [[ -n "$1" ]]; then
 
-    if [ $argument -ge 1 ]; then
+    if [[ -n "$argument" && $argument -ge 1 ]]; then
       echo "[+] Connecting to https://overthewire.org/wargames/bandit/bandit${bandit}.html"
+      ssh -o ExitOnForwardFailure=yes "$set_name" -p 2220
     fi
-    ssh "$set_name" -p 2220
   fi
-
 }
