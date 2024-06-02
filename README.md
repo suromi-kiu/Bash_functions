@@ -17,7 +17,7 @@ cppss test1
 ```
 <br>
 
-### ssh over the wire
+## ssh over the wire
 
 ### if you want to connect as bandit0 just use the command without parameters
 ```bash
