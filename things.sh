@@ -26,22 +26,25 @@ function cppss() {
 }
 
 # this function is uses to connect with ssh to overthewire.org
-function conover(){
-
+function conover() {
   argument=$1
   bandit=$((argument + 1))
   set_name="bandit${argument}@bandit.labs.overthewire.org"
 
   if [[ $# -eq 0 ]]; then
-    echo "[+] Connecting to https://overthewire.org/wargames/bandit/bandit1.html"
+
+    echo "[+] Connecting to https://overthewire.org/wargames/bandit/bandit0.html"
     ssh -o ExitOnForwardFailure=yes "bandit0@bandit.labs.overthewire.org" -p 2220
-  fi
 
-  if [[ -n "$1" ]]; then
+  elif [[ $argument =~ ^[0-9]+$ ]]; then
 
-    if [[ -n "$argument" && $argument -ge 1 ]]; then
-      echo "[+] Connecting to https://overthewire.org/wargames/bandit/bandit${bandit}.html"
-      ssh -o ExitOnForwardFailure=yes "$set_name" -p 2220
-    fi
+    echo "[+] Connecting to https://overthewire.org/wargames/bandit/bandit${bandit}.html"
+    ssh -o ExitOnForwardFailure=yes "$set_name" -p 2220
+
+  else
+
+    echo "Usage: conover [level_number]"
+    echo "Connects to the specified Bandit level. If no level number is provided, connects to Bandit 0."
+
   fi
 }
