@@ -36,7 +36,7 @@ function conover() {
     echo "[+] Connecting to https://overthewire.org/wargames/bandit/bandit0.html"
     ssh -o ExitOnForwardFailure=yes "bandit0@bandit.labs.overthewire.org" -p 2220
 
-  elif [[ $argument =~ ^[0-9]+$ ]]; then
+  elif [[ $argument =~ ^(0|[1-9]|[1-2][0-9]|3[0-4])$ ]]; then
 
     echo "[+] Connecting to https://overthewire.org/wargames/bandit/bandit${bandit}.html"
     ssh -o ExitOnForwardFailure=yes "$set_name" -p 2220
