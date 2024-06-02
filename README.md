@@ -19,12 +19,12 @@ cppss test1
 
 ### ssh over the wire
 
-#if you want to connect as bandit0 just use the command without parameters
+# if you want to connect as bandit0 just use the command without parameters
 ```bash
 conover
 ```
 
-#if you want to connect as bandit1 or more just enter your bandit user number
+# if you want to connect as bandit1 or more just enter your bandit user number
 ```bash
 conover 1
 ```
