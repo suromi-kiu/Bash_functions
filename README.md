@@ -20,6 +20,11 @@ cppss test1
 ```bash
 setbsh test1
 ```
+
+### Get your ip
+```bash
+mipp
+```
 <br>
 
 ## ssh over the wire
