@@ -61,3 +61,11 @@ function conover() {
 
   fi
 }
+
+function mipp(){
+  ip_private=$(ifconfig | awk '/inet/{print $2}' | head -n 1)
+  netmsk=$(ifconfig | awk '/inet/{print $4}' | head -n 1)
+  broadcs=$(ifconfig | awk '/inet/{print $6}' | head -n 1)
+
+  echo "[IP] Your ip private is: ${ip_private}\n[netmask] Your netmask is: ${netmsk}\n[broadcast] Your broadcast is: ${broadcs}"
+}
