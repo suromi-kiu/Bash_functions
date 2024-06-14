@@ -1,14 +1,3 @@
-function marpy() {
-  if [[ $# -eq 0 ]]; then
-    echo "Error: write a name"
-  fi
-
-  if [[ -n "$1" ]]; then
-    set_name="${1}.py"
-    touch "$set_name" && chmod +x "$set_name"
-  fi
-}
-
 # create a python file add x permits and write shebang
 function marpy() {
   if [[ $# -eq 0 ]]; then
