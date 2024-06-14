@@ -11,9 +11,14 @@
 marpy test1
 ```
 
-### c++ file
+### C++ file
 ```bash
 cppss test1
+```
+
+### Bash file
+```bash
+setbsh test1
 ```
 <br>
 
