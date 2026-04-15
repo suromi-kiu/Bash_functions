@@ -18,7 +18,7 @@ trap ctrl_c SIGINT
 
 function get_ifp(){
   iface=$(ip route | awk '{print $5}' | head -n 1)
-  ip=$(ip a | grep "wlp5s0" | awk '{print $2}' | tail -n 1 | cut -d '/' -f1) 
+  ip=$(ip a | grep "$iface" | awk '{print $2}' | tail -n 1 | cut -d '/' -f1) 
   echo "$iface - $ip"
 }
 
