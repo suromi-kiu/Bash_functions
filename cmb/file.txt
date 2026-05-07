@@ -1,0 +1,9 @@
+In order to use this script, you have to execute the following commands: 
+1. git clone https://github.com/vavkamil/dvwp.git
+2. cd dvwp/
+3. docker-compose up -d --build
+
+4. NOTE : Install wordpress (port 127.0.0.1:31337)
+5. docker-compose run --rm wp-cli install-wp
+
+Then you can use the script to discover an user's password by applying brute force
